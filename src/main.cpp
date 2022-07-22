@@ -2,7 +2,8 @@
 
 // ピンポン(ボタン押した時)
 void chime() {
-  M5.Beep.tone(659, 500);
+  M5.Beep.tone(659, 300);
+  delay(300);
   M5.Beep.tone(523, 1000);
 }
 
@@ -17,5 +18,8 @@ void loop() {
 
   if (M5.BtnA.wasPressed()) {
     chime();
+  }
+  if (M5.BtnB.wasPressed()) {
+    M5.Beep.beep();
   }
 }
